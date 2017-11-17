@@ -1,3 +1,6 @@
+$lightGrey: #eee;
+$grey: #ddd;
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
@@ -22,8 +25,69 @@
 
 .body {
 	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	background: $lightGrey;
 	
 	.wrapper {
+		nav, header, .sidebar, section, footer{
+			position: relative;
+			
+			&:before{
+				background: $grey;
+				position: absolute;
+				content: '';
+				top: 15px;
+				bottom: 15px;
+				left: 0px;
+				right: 0px;
+			}
+		}
 		
+		nav, header, footer {
+			width: 100%;
+		}
+		
+		nav {
+			height: 105px;
+		}
+		
+		header {
+			height: 430px
+		}
+		
+		.container {
+			width: 1140px;
+			margin: 0 auto;
+			display: block;
+			
+			aside {
+				&:before {
+					right: 15px;
+				}
+				
+				&.ad {
+					width: 315px;
+					height: 630px;
+				}
+				
+				&.sidebar{
+					width: 315px;
+					height: 430px;
+				}
+			}
+			
+			section {
+				width: calc(100%-330px);
+				height: 1230px;
+				
+				&:before {
+					left: 15px;
+				}
+			}
+		}
+		
+		footer {
+			height: 280px;
+		}
 	}
 }

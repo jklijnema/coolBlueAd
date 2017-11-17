@@ -13,6 +13,43 @@
   box-sizing: border-box; }
 
 .body {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  background: #eee; }
+  .body .wrapper nav, .body .wrapper header, .body .wrapper .sidebar, .body .wrapper section, .body .wrapper footer {
+    position: relative; }
+    .body .wrapper nav:before, .body .wrapper header:before, .body .wrapper .sidebar:before, .body .wrapper section:before, .body .wrapper footer:before {
+      background: #ddd;
+      position: absolute;
+      content: '';
+      top: 15px;
+      bottom: 15px;
+      left: 0px;
+      right: 0px; }
+  .body .wrapper nav, .body .wrapper header, .body .wrapper footer {
+    width: 100%; }
+  .body .wrapper nav {
+    height: 105px; }
+  .body .wrapper header {
+    height: 430px; }
+  .body .wrapper .container {
+    width: 1140px;
+    margin: 0 auto;
+    display: block; }
+    .body .wrapper .container aside:before {
+      right: 15px; }
+    .body .wrapper .container aside.ad {
+      width: 315px;
+      height: 630px; }
+    .body .wrapper .container aside.sidebar {
+      width: 315px;
+      height: 430px; }
+    .body .wrapper .container section {
+      width: calc(100%-330px);
+      height: 1230px; }
+      .body .wrapper .container section:before {
+        left: 15px; }
+  .body .wrapper footer {
+    height: 280px; }
 
 /*# sourceMappingURL=style.css.map */
