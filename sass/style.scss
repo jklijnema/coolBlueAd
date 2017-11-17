@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+	font-family: dobraSlab;
+	src: url(../fonts/dobraslab-book-webfont.ttf);
+}
+
+@font-face {
+	font-family: avenir;
+	src: url(../fonts/avenirltstd-black-webfont.ttf);
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	
+}
+
+.body {
+	font-size: 16px;
+	
+	.wrapper {
+		
+	}
+}
