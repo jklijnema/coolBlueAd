@@ -1,6 +1,13 @@
+/*-----COLORS-----*/
 $lightGrey: #eee;
 $grey: #ddd;
+$coolBlue: #0090e3;
+$darkBlue: #285dab;
 
+/*-----VARS-----*/
+$trans: .15s ease-in-out;
+
+/*-----FONTS-----*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
@@ -13,9 +20,10 @@ $grey: #ddd;
 	src: url(../fonts/avenirltstd-black-webfont.ttf);
 }
 
+/*-----GENERAL-----*/
 *{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -23,23 +31,25 @@ $grey: #ddd;
 	
 }
 
-.body {
-	font-size: 16px;
+/*-----STYLE-----*/
+body {
+	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
 	background: $lightGrey;
 	
 	.wrapper {
 		nav, header, .sidebar, section, footer{
 			position: relative;
+			display: block;
 			
 			&:before{
 				background: $grey;
 				position: absolute;
 				content: '';
-				top: 15px;
-				bottom: 15px;
-				left: 0px;
-				right: 0px;
+				top: 0px;
+				bottom: 0px;
+				left: 0;
+				right: 0;
 			}
 		}
 		
@@ -48,46 +58,253 @@ $grey: #ddd;
 		}
 		
 		nav {
-			height: 105px;
-		}
-		
-		header {
-			height: 430px
+			height: 80px;
+			
+			&:before{
+				bottom: 5px;
+			}
 		}
 		
 		.container {
-			width: 1140px;
+			max-width: 1140px;
+			width: 80%;
 			margin: 0 auto;
 			display: block;
 			
+			&:after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+			
 			aside {
-				&:before {
-					right: 15px;
-				}
+				padding-right: 15px;
+				width: 315px;
+				float: left;
 				
-				&.ad {
-					width: 315px;
-					height: 630px;
-				}
 				
-				&.sidebar{
-					width: 315px;
-					height: 430px;
+				/*-----ADD STYLE-----*/
+				.ad {
+					width: 100%;
+					height: 600px;
+					position: relative;
+					margin-bottom: 15px;
+					margin-top: 15px;
+					background: #fff;
+					box-shadow: 1px 1px 3px rgba(0,0,0,.05);
+					border: 1px solid #fff;
+					transition: box-shadow $trans;
+					
+					&:hover {
+						box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+						
+						.content {
+							.product {
+								.machineHolder {
+									.windowHolder {
+										.window {
+											animation-duration: 1.75s;
+										}
+									}
+								}
+							}
+						}
+					}
+					
+					.header {
+						height: 50px;
+						width: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						
+						.logoHolder {
+							position: absolute;
+							right: 20px;
+							top: 20px;
+							height: auto;
+							width: auto;
+							
+							img {
+								display: block;
+							}
+						}
+					}
+					
+					.content {
+						margin-top: 100px;
+						margin-bottom: 50px;
+						padding-left: 20px;
+						padding-right: 20px;
+						
+						.title {
+							font-family: 'dobraSlab', serif;
+							color: $coolBlue;
+							font-size: 34px;
+							font-weight: 400;
+						}
+						
+						.subtitle {
+							font-family: 'avenir', sans-serif;
+							color: $darkBlue;
+							font-size: 16px;
+							font-weight: 900;
+							letter-spacing: -1px;
+						}
+						
+						.product {
+							margin-top: 30px;
+							
+							.machineHolder {
+								height: 195px;
+								width: 137px;
+								display: block;
+								margin: 0 auto;
+								position: relative;
+								
+								.machine {
+									width: auto;
+									height: 100%;
+								}
+								
+								.windowHolder {
+									position: absolute;
+									height: 75px;
+									top: 50px;
+									left: 50%;
+									transform: translatex(-50%);
+									
+									.window {
+										width: auto;
+										height: 100%;
+										animation: rotate linear infinite;
+										animation-duration: 7.5s;
+									}
+								}
+								
+								.priceHolder {
+									background: $coolBlue;
+									position: absolute;
+									width: 70px;
+									height: 70px;
+									top: 50%;
+									left: 90%;
+									text-align: center;
+									-webkit-border-radius: 100%;
+									-moz-border-radius: 100%;
+									border-radius: 100%;
+									transform: translateY(-50%);
+									
+									.price {
+										font-family: 'avenir', sans-serif;
+										color: #fff;
+										font-size: 27px;
+										font-weight: 900;
+										letter-spacing: -1px;
+										line-height: 70px;
+									}
+								}
+							}
+						}
+						
+					}
+					
+					.footer {
+						background: $coolBlue;
+						height: 50px;
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						padding-left: 20px;
+						
+						.cta{
+							.link {
+								color: #fff;
+								text-decoration: none;
+								line-height: 50px;
+								margin-left: 0px;
+								transition: margin-left $trans;
+								
+								&:before {
+									content: "";
+									width: 5px;
+									height: 5px;
+									display: inline-block;
+									position: relative;
+									border-top: 2px solid #fff;
+									border-right: 2px solid #fff;
+									margin-right: 10px;
+									-webkit-transform: translatey(-2px) rotate(45deg);
+									-moz-transform: translatey(-2px) rotate(45deg);
+									-ms-transform: translatey(-2px) rotate(45deg);
+									-o-transform: translatey(-2px) rotate(45deg);
+									transform: translatey(-2px) rotate(45deg);
+									transition: margin-right $trans;
+								}
+								
+								&:hover {
+									margin-left: 5px;
+									
+									&:before {
+										margin-right: 12px;
+									}
+								}
+							}
+						}
+						
+						.logoHolder {
+							position: absolute;
+							right: 0;
+							bottom: 0;
+							height: auto;
+							width: auto;
+							
+							img {
+								display: block;
+							}
+						}
+					}
+					
+				}
+				/*-----ENDING ADD STYLE-----*/
+				
+				.sidebar{
+					width: 100%;
+					height: 230px;
+					
+					&:before {
+						top: 15px;
+						bottom: 15px;
+					}
 				}
 			}
 			
 			section {
-				width: calc(100%-330px);
-				height: 1230px;
+				width: calc(100% - 330px);
+				height: 980px;
+				float: left;
 				
 				&:before {
 					left: 15px;
+					top: 15px;
+					bottom: 15px;
 				}
 			}
 		}
 		
 		footer {
 			height: 280px;
+			
+			&:before{
+				top: 15px;
+			}
 		}
 	}
+}
+
+/*-----ANIMATION-----*/
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
 }

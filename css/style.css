@@ -1,3 +1,6 @@
+/*-----COLORS-----*/
+/*-----VARS-----*/
+/*-----FONTS-----*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @font-face {
   font-family: dobraSlab;
@@ -5,51 +8,201 @@
 @font-face {
   font-family: avenir;
   src: url(../fonts/avenirltstd-black-webfont.ttf); }
+/*-----GENERAL-----*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.body {
-  font-size: 16px;
+/*-----STYLE-----*/
+body {
+  font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   background: #eee; }
-  .body .wrapper nav, .body .wrapper header, .body .wrapper .sidebar, .body .wrapper section, .body .wrapper footer {
-    position: relative; }
-    .body .wrapper nav:before, .body .wrapper header:before, .body .wrapper .sidebar:before, .body .wrapper section:before, .body .wrapper footer:before {
+  body .wrapper nav, body .wrapper header, body .wrapper .sidebar, body .wrapper section, body .wrapper footer {
+    position: relative;
+    display: block; }
+    body .wrapper nav:before, body .wrapper header:before, body .wrapper .sidebar:before, body .wrapper section:before, body .wrapper footer:before {
       background: #ddd;
       position: absolute;
       content: '';
-      top: 15px;
-      bottom: 15px;
-      left: 0px;
-      right: 0px; }
-  .body .wrapper nav, .body .wrapper header, .body .wrapper footer {
+      top: 0px;
+      bottom: 0px;
+      left: 0;
+      right: 0; }
+  body .wrapper nav, body .wrapper header, body .wrapper footer {
     width: 100%; }
-  .body .wrapper nav {
-    height: 105px; }
-  .body .wrapper header {
-    height: 430px; }
-  .body .wrapper .container {
-    width: 1140px;
+  body .wrapper nav {
+    height: 80px; }
+    body .wrapper nav:before {
+      bottom: 5px; }
+  body .wrapper .container {
+    max-width: 1140px;
+    width: 80%;
     margin: 0 auto;
     display: block; }
-    .body .wrapper .container aside:before {
-      right: 15px; }
-    .body .wrapper .container aside.ad {
+    body .wrapper .container:after {
+      display: block;
+      content: '';
+      clear: both; }
+    body .wrapper .container aside {
+      padding-right: 15px;
       width: 315px;
-      height: 630px; }
-    .body .wrapper .container aside.sidebar {
-      width: 315px;
-      height: 430px; }
-    .body .wrapper .container section {
-      width: calc(100%-330px);
-      height: 1230px; }
-      .body .wrapper .container section:before {
-        left: 15px; }
-  .body .wrapper footer {
+      float: left;
+      /*-----ADD STYLE-----*/
+      /*-----ENDING ADD STYLE-----*/ }
+      body .wrapper .container aside .ad {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        background: #fff;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+        border: 1px solid #fff;
+        transition: box-shadow 0.15s ease-in-out; }
+        body .wrapper .container aside .ad:hover {
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1); }
+          body .wrapper .container aside .ad:hover .content .product .machineHolder .windowHolder .window {
+            animation-duration: 1.75s; }
+        body .wrapper .container aside .ad .header {
+          height: 50px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0; }
+          body .wrapper .container aside .ad .header .logoHolder {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            height: auto;
+            width: auto; }
+            body .wrapper .container aside .ad .header .logoHolder img {
+              display: block; }
+        body .wrapper .container aside .ad .content {
+          margin-top: 100px;
+          margin-bottom: 50px;
+          padding-left: 20px;
+          padding-right: 20px; }
+          body .wrapper .container aside .ad .content .title {
+            font-family: 'dobraSlab', serif;
+            color: #0090e3;
+            font-size: 34px;
+            font-weight: 400; }
+          body .wrapper .container aside .ad .content .subtitle {
+            font-family: 'avenir', sans-serif;
+            color: #285dab;
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: -1px; }
+          body .wrapper .container aside .ad .content .product {
+            margin-top: 30px; }
+            body .wrapper .container aside .ad .content .product .machineHolder {
+              height: 195px;
+              width: 137px;
+              display: block;
+              margin: 0 auto;
+              position: relative; }
+              body .wrapper .container aside .ad .content .product .machineHolder .machine {
+                width: auto;
+                height: 100%; }
+              body .wrapper .container aside .ad .content .product .machineHolder .windowHolder {
+                position: absolute;
+                height: 75px;
+                top: 50px;
+                left: 50%;
+                transform: translatex(-50%); }
+                body .wrapper .container aside .ad .content .product .machineHolder .windowHolder .window {
+                  width: auto;
+                  height: 100%;
+                  animation: rotate linear infinite;
+                  animation-duration: 7.5s; }
+              body .wrapper .container aside .ad .content .product .machineHolder .priceHolder {
+                background: #0090e3;
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                top: 50%;
+                left: 90%;
+                text-align: center;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                border-radius: 100%;
+                transform: translateY(-50%); }
+                body .wrapper .container aside .ad .content .product .machineHolder .priceHolder .price {
+                  font-family: 'avenir', sans-serif;
+                  color: #fff;
+                  font-size: 27px;
+                  font-weight: 900;
+                  letter-spacing: -1px;
+                  line-height: 70px; }
+        body .wrapper .container aside .ad .footer {
+          background: #0090e3;
+          height: 50px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding-left: 20px; }
+          body .wrapper .container aside .ad .footer .cta .link {
+            color: #fff;
+            text-decoration: none;
+            line-height: 50px;
+            margin-left: 0px;
+            transition: margin-left 0.15s ease-in-out; }
+            body .wrapper .container aside .ad .footer .cta .link:before {
+              content: "";
+              width: 5px;
+              height: 5px;
+              display: inline-block;
+              position: relative;
+              border-top: 2px solid #fff;
+              border-right: 2px solid #fff;
+              margin-right: 10px;
+              -webkit-transform: translatey(-2px) rotate(45deg);
+              -moz-transform: translatey(-2px) rotate(45deg);
+              -ms-transform: translatey(-2px) rotate(45deg);
+              -o-transform: translatey(-2px) rotate(45deg);
+              transform: translatey(-2px) rotate(45deg);
+              transition: margin-right 0.15s ease-in-out; }
+            body .wrapper .container aside .ad .footer .cta .link:hover {
+              margin-left: 5px; }
+              body .wrapper .container aside .ad .footer .cta .link:hover:before {
+                margin-right: 12px; }
+          body .wrapper .container aside .ad .footer .logoHolder {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: auto;
+            width: auto; }
+            body .wrapper .container aside .ad .footer .logoHolder img {
+              display: block; }
+      body .wrapper .container aside .sidebar {
+        width: 100%;
+        height: 230px; }
+        body .wrapper .container aside .sidebar:before {
+          top: 15px;
+          bottom: 15px; }
+    body .wrapper .container section {
+      width: calc(100% - 330px);
+      height: 980px;
+      float: left; }
+      body .wrapper .container section:before {
+        left: 15px;
+        top: 15px;
+        bottom: 15px; }
+  body .wrapper footer {
     height: 280px; }
+    body .wrapper footer:before {
+      top: 15px; }
+
+/*-----ANIMATION-----*/
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */
