@@ -65,6 +65,8 @@ body {
         transition: box-shadow 0.15s ease-in-out; }
         body .wrapper .container aside .ad:hover {
           box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1); }
+          body .wrapper .container aside .ad:hover .content .product .machineHolder .priceHolder {
+            transform: translateY(-50%) scale(1.05); }
         body .wrapper .container aside .ad .header {
           height: 50px;
           width: 100%;
@@ -126,7 +128,8 @@ body {
                 -webkit-border-radius: 100%;
                 -moz-border-radius: 100%;
                 border-radius: 100%;
-                transform: translateY(-50%); }
+                transform: translateY(-50%) scale(1);
+                transition: transform 0.15s ease-in-out; }
                 body .wrapper .container aside .ad .content .product .machineHolder .priceHolder .price {
                   font-family: 'avenir', sans-serif;
                   color: #fff;
@@ -193,12 +196,5 @@ body {
     height: 280px; }
     body .wrapper footer:before {
       top: 15px; }
-
-/*-----ANIMATION-----*/
-@keyframes rotate {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */

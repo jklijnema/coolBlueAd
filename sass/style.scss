@@ -101,10 +101,8 @@ body {
 						.content {
 							.product {
 								.machineHolder {
-									.windowHolder {
-										.window {
-											//animation-duration: 1.75s;
-										}
+									.priceHolder {
+										transform: translateY(-50%) scale(1.05);
 									}
 								}
 							}
@@ -193,7 +191,8 @@ body {
 									-webkit-border-radius: 100%;
 									-moz-border-radius: 100%;
 									border-radius: 100%;
-									transform: translateY(-50%);
+									transform: translateY(-50%) scale(1);
+									transition: transform $trans;
 									
 									.price {
 										font-family: 'avenir', sans-serif;
@@ -301,10 +300,4 @@ body {
 			}
 		}
 	}
-}
-
-/*-----ANIMATION-----*/
-@keyframes rotate {
-	from {transform: rotate(0deg);}
-	to{transform: rotate(360deg);}
 }
