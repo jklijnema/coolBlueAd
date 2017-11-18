@@ -65,8 +65,6 @@ body {
         transition: box-shadow 0.15s ease-in-out; }
         body .wrapper .container aside .ad:hover {
           box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1); }
-          body .wrapper .container aside .ad:hover .content .product .machineHolder .windowHolder .window {
-            animation-duration: 1.75s; }
         body .wrapper .container aside .ad .header {
           height: 50px;
           width: 100%;
@@ -116,9 +114,7 @@ body {
                 transform: translatex(-50%); }
                 body .wrapper .container aside .ad .content .product .machineHolder .windowHolder .window {
                   width: auto;
-                  height: 100%;
-                  animation: rotate linear infinite;
-                  animation-duration: 7.5s; }
+                  height: 100%; }
               body .wrapper .container aside .ad .content .product .machineHolder .priceHolder {
                 background: #0090e3;
                 position: absolute;
